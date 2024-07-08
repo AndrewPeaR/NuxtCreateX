@@ -1,15 +1,36 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  modules: ['nuxt-svgo', "@nuxt/image"],
   vite: {
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: '@use "~/assets/sass/style.sass" as *\n'
+          additionalData: '@use "~/const/style.sass" as *\n'
         }
       }
     }
   },
+  svgo: {
+    autoImportPath: '@/assets/icons/',
+    componentPrefix: 'Icon',
+    // И почему с пустым конфигом работает, а если убрать - то нет????
+    svgoConfig: {
+    //   // multipass: true,
+    //   // plugins: [
+    //   //   {
+    //   //     name: 'preset-default',
+    //   //     params: {
+    //   //       overrides: {
+    //   //         removeDoctype: false,
+    //   //         removeViewBox: false
+    //   //       }
+    //   //     }
+    //   //   }
+    //   // ]
+    }
+  },
+
   app:{
     head: {
       title: 'CreateX',
@@ -23,11 +44,13 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '@@/public/favicon.ico' },
+        // { rel: 'icon', type: 'image/x-icon', href: '@/public/favicon.ico' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap' },
       ]
     },
-  }
+  },
+
+  compatibilityDate: '2024-07-05'
 })

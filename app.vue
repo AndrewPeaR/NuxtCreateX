@@ -1,9 +1,9 @@
+<script setup>
+  
+</script>
+
 <template>
-  <div>
-    <Header />
-  </div>
+  <NuxtPage />
 </template>
 
-<script>
-  import Header from "./components/Header.vue";
-</script>
+

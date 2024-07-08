@@ -1,20 +1,15 @@
+<script setup>
+  
+</script>
+
 <template>
     <header>
         <div class="wrapper header">
-            <Navigation />
-            <NavContacts />
+            <HeaderNav />
+            <HeaderNavContacts />
         </div>
     </header>
 </template>
-
-<script>
-import NavContacts from './NavContacts.vue';
-import Navigation from './Navigation.vue';
-
-    export default {
-        
-    }
-</script>
 
 <style lang="sass">
 .header
