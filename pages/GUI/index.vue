@@ -4,14 +4,13 @@
   <div
     style="
         background-color: rgba(0, 0, 0, 0.6); 
-        height: 100vh; 
+        height: 200vh; 
         width: 100%;
         padding-top: 50px;
         "
   >
-    <div class="wrapper">
-        <!-- <ElementsInputForm /> -->
-        <ServicesBlock />
+    <div class="wrapper" style="margin-bottom: 30px">
+
     </div>
   </div>
 </template>

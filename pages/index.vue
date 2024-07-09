@@ -1,33 +1,75 @@
 <script setup>
-
 function alerting() {
   alert(`i'm button!`);
 }
-
 </script>
 
 <template>
-  <Header />
-  
-  <div
-    style="
-      background-color: rgba(90, 109, 123, 0.6);
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 40px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    "
-  >
-    <ElementsAroundButton :type="'play'"/>
-    <ElementsAroundButton :type="'mute'"/>
-    <ElementsMyButton @click="alerting" :btn_title="'Outline button'" />
-    <ElementsMyButton @click="alerting" :btn_title="'hello, world!'" :isOrange="true" />
-    <ServicesBlock />
-  </div>
+  <div style="padding-bottom: 60px">
+    <Header />
 
-  <CoreValuesBlock />
+    <!-- Стили в диве только чтобы красивее было смотреть на элементы, потом он удалится -->
+    <div
+      style="
+        background-color: rgba(90, 109, 123, 0.6);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      "
+    >
+    <!-- 
+    Обязательно ли всякие тэги кнопок, инпутов и прочего
+    будуд называтьсяс 'Elements'? Или можно пофиксить?
+    -->
+      <ElementsAroundButton :type="'play'" />
+      <ElementsAroundButton :type="'mute'" />
+      <ElementsMyButton
+        @click="alerting"
+        :btn_title="'Outline button'"
+        :isOrange="false"
+        :isLarge="true"
+      />
+      <ElementsMyButton
+        @click="alerting"
+        :isLarge="false"
+        :btn_title="'hello, world!'"
+        :isOrange="true"
+      />
+      <ElementsMyButton
+        @click="alerting"
+        :isLarge="true"
+        :btn_title="`I'm a large!`"
+        :isOrange="true"
+      />
+    </div>
+    <div
+      style="
+        background-color: rgba(90, 109, 123, 0.6);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      "
+    >
+      <ServicesBlock />
+      <PortfolioCard
+        :image="'portfolio.png'"
+        :title="'Red Finger Building'"
+        :text="'Business Centers'"
+        :link="'https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
+      />
+    </div>
+    <div class="wrapper">
+      <CoreValuesBlock />
+      <RequestformBlock :method="'Any method'" :action="'Any action'"/>
+      <PortfolioBlock style="margin-top: 80px;"/>
+    </div>
+  </div>
 </template>
 
 <style lang="sass"></style>

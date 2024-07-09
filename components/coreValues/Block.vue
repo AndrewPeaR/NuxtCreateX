@@ -22,25 +22,26 @@ const coreValueCard = [
 </script>
 
 <template>
-    <div class="coreValues">
-        <div class="wrapper">
-            <h2 class="section-title">We are Createx Construction Bureau</h2>
-            <p class="section-description">We are rightfully considered to be the best construction company in the USA.</p>
-            <div class="coreValuesCards">
-                <CoreValuesCard
-                v-for="card in coreValueCard"
-                :key="card.title"
-                :image="card.image"
-                :title="card.title"
-                :parag="card.parag"
-                />
-            </div>
-        </div>
+  <div class="core-values">
+    <h2 class="section-title">We are Createx Construction Bureau</h2>
+    <p class="section-description">
+      We are rightfully considered to be the best construction company in the
+      USA.
+    </p>
+    <div class="core-values-cards">
+      <CoreValuesCard
+        v-for="card in coreValueCard"
+        :key="card.title"
+        :image="card.image"
+        :title="card.title"
+        :parag="card.parag"
+      />
     </div>
+  </div>
 </template>
 
 <style lang="sass">
-.coreValuesCards
+.core-values-cards
     display: flex
     justify-content: space-between
 </style>
