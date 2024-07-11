@@ -37,7 +37,8 @@ const props = defineProps(["image", "title", "text", "link"]);
 
 .portfolio-card:hover
     box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.10), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05)
-.portfolio-card__menu:hover
+    
+.portfolio-card:hover .portfolio-card__menu
     bottom: 0
 
 .portfolio-card__menu

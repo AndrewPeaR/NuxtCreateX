@@ -1,14 +1,20 @@
 <script setup>
-    
+    const props = defineProps([
+        'image', 'icon', 'title'
+    ])
 </script>
 
 <template>
     <div class="servicesCard">
-        <img class="servicesCard__backgroundImage" src="/assets/image/image.png" alt="serviceCard">
+        <img class="servicesCard__backgroundImage" :src="`/_nuxt/assets/image/${image}`" alt="serviceCard">
         <div class="servicesCard__info">
-            <!-- <img class="servicesCard__infoIcon" src="" alt=""> -->
-            <IconConstruction class="servicesCard__infoIcon" :fontControlled="false" :filled="true"/>
-            <h3 class="servicesCard__title">Construction</h3>
+             <ElementsIcon 
+                class="servicesCard__icon"
+                :name='icon'
+                :filled="true"
+                :fontControlled="false"
+             />
+            <h3 class="servicesCard__title">{{ title }}</h3>
         </div>
     </div>
 </template>
@@ -36,13 +42,14 @@
     flex-direction: column
     align-items: center
 .servicesCard__title
+    white-space: nowrap
     @include font-styles(20px, 700, 150%, 0, $dark)
     @include transition
 
-.servicesCard__infoIcon
+.servicesCard__icon
     margin-bottom: 24px
 
-.servicesCard__infoIcon > path
+.servicesCard__icon path
     fill: $orange
     @include transition
 
@@ -52,7 +59,7 @@
     opacity: 0.6
 .servicesCard:hover .servicesCard__title
     color: $white
-.servicesCard:hover .servicesCard__infoIcon > path
+.servicesCard:hover .servicesCard__icon path
     fill: $white
 
 </style>

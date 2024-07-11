@@ -1,19 +1,19 @@
 <script setup>
 const coreValueCard = [
   {
-    image: "QualityCard.svg",
+    icon: "QualityCard.svg",
     title: "Quality",
     parag:
       "Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.",
   },
   {
-    image: "SafetyCard.svg",
+    icon: "SafetyCard.svg",
     title: "Safety",
     parag:
       "Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.",
   },
   {
-    image: "ComfortCard.svg",
+    icon: "ComfortCard.svg",
     title: "Comfort",
     parag:
       "Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.",
@@ -32,7 +32,7 @@ const coreValueCard = [
       <CoreValuesCard
         v-for="card in coreValueCard"
         :key="card.title"
-        :image="card.image"
+        :icon="card.icon"
         :title="card.title"
         :parag="card.parag"
       />

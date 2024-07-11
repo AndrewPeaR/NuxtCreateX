@@ -1,14 +1,17 @@
 <script setup>
     const props = defineProps([
-        'image', 'title', 'parag' 
+        'icon', 'title', 'parag' 
     ])
 </script>
 
 <template>
     <div class="core-value-card">
-        <!-- ?????????? -->
-        <!-- Почему картинки заработали, когда я подставил _nuxt????? -->
-        <img :src="`_nuxt/assets/icons/${image}`" :alt="props.image" class="core-value-card__img">
+        <ElementsIcon 
+            class="core-value-card__icon"
+            :name='icon'
+            :filled="true"
+            :fontControlled="false"
+        />
         <h3 class="core-calue-card__title">{{ title }}</h3>
         <p class="core-value-card__parag">{{ parag }}</p>
     </div>
@@ -22,7 +25,7 @@
     display: flex
     align-items: center
     flex-direction: column
-.core-value-card__img
+.core-value-card__icon
     margin-bottom: 24px
 .core-value-card__title
     margin-bottom: 8px

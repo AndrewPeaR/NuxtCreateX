@@ -20,7 +20,7 @@ function alerting() {
         align-items: center;
       "
     >
-    <!-- 
+      <!-- 
     Обязательно ли всякие тэги кнопок, инпутов и прочего
     будуд называтьсяс 'Elements'? Или можно пофиксить?
     -->
@@ -45,18 +45,7 @@ function alerting() {
         :isOrange="true"
       />
     </div>
-    <div
-      style="
-        background-color: rgba(90, 109, 123, 0.6);
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 40px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      "
-    >
-      <ServicesBlock />
+    <div class="pretty-wrapper">
       <PortfolioCard
         :image="'portfolio.png'"
         :title="'Red Finger Building'"
@@ -66,10 +55,25 @@ function alerting() {
     </div>
     <div class="wrapper">
       <CoreValuesBlock />
-      <RequestformBlock :method="'Any method'" :action="'Any action'"/>
-      <PortfolioBlock style="margin-top: 80px;"/>
+      <RequestformBlock :method="'Any method'" :action="'Any action'" />
+      <PortfolioBlock style="margin-top: 80px" />
+    </div>
+    <div class="" style="
+      background-color: rgba(90, 109, 123, 0.6);
+      padding: 30px 100px;
+    ">
+      <ServicesBlock />
     </div>
   </div>
 </template>
 
-<style lang="sass"></style>
+<style lang="sass">
+.pretty-wrapper
+  background-color: rgba(90, 109, 123, 0.6)
+  padding-top: 10px
+  padding-bottom: 10px
+  padding-left: 40px
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+</style>

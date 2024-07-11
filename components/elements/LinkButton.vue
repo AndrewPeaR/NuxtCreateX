@@ -1,11 +1,9 @@
 <script setup>
 const props = defineProps(["title", "link", "isOrange"]);
-let link_btn_class = "link-btn";
-link_btn_class += props.isOrange ? " link-btn_orange" : "";
 </script>
 
 <template>
-  <a :class="link_btn_class" :href="link">
+  <a :class="{'link-btn_orange': isOrange}" class="link-btn" :href="link">
     {{ title }}
   </a>
 </template>

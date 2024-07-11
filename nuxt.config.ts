@@ -12,9 +12,8 @@ export default defineNuxtConfig({
     }
   },
   svgo: {
-    autoImportPath: '@/assets/icons/',
+    autoImportPath: './assets/icons/',
     componentPrefix: 'Icon',
-    // И почему с пустым конфигом работает, а если убрать - то нет????
     svgoConfig: {
     //   // multipass: true,
     //   // plugins: [

@@ -1,15 +1,15 @@
 <script setup>
 const props = defineProps(["btn_title", "isOrange", "isLarge"]);
-let btn_class = "btn";
-btn_class += props.isLarge ? " btn_large" : "";
-btn_class += props.isOrange ? " btn_orange" : "";
 </script>
 
 <template>
-  <button v-if="isOrange" :class="btn_class">
-    {{ btn_title }}
-  </button>
-  <button v-else :class="btn_class">
+  <button
+    :class="{
+      btn_orange: isOrange,
+      btn_large: isLarge,
+    }"
+    class="btn"
+  >
     {{ btn_title }}
   </button>
 </template>
