@@ -10,7 +10,7 @@
         "
   >
     <div class="wrapper" style="margin-bottom: 30px">
-
+      
     </div>
   </div>
 </template>

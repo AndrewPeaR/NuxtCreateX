@@ -40,5 +40,5 @@ const props = defineProps(["title", "link", "isOrange"]);
     color: $white
 
 .link-btn_orange:hover
-    box-shadow: 0px 10px 20px 10px rgba(34, 60, 80, 0.10)
+    box-shadow: 0 10px 20px 10px rgba(34, 60, 80, 0.10)
 </style>

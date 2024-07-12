@@ -26,19 +26,19 @@ function alerting() {
     -->
       <ElementsAroundButton :type="'play'" />
       <ElementsAroundButton :type="'mute'" />
-      <ElementsMyButton
+      <ElementsButton
         @click="alerting"
         :btn_title="'Outline button'"
         :isOrange="false"
         :isLarge="true"
       />
-      <ElementsMyButton
+      <ElementsButton
         @click="alerting"
         :isLarge="false"
         :btn_title="'hello, world!'"
         :isOrange="true"
       />
-      <ElementsMyButton
+      <ElementsButton
         @click="alerting"
         :isLarge="true"
         :btn_title="`I'm a large!`"
@@ -56,13 +56,18 @@ function alerting() {
     <div class="wrapper">
       <CoreValuesBlock />
       <RequestformBlock :method="'Any method'" :action="'Any action'" />
-      <PortfolioBlock style="margin-top: 80px" />
+      <PortfolioBlock style="margin: 80px 0" />
     </div>
-    <div class="" style="
+    <div style="
+      margin: 80px 0;
       background-color: rgba(90, 109, 123, 0.6);
       padding: 30px 100px;
     ">
       <ServicesBlock />
+    </div>
+    <div class="wrapper">
+      <Partners style="margin-bottom: 80px;"/>     
+      <RecentNewsBlock />
     </div>
   </div>
 </template>

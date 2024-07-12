@@ -29,7 +29,7 @@ const props = defineProps([
         :placeholder="'Your message'"
         :nameInput="'message'"
       />
-      <ElementsMyButton :isLarge="false" :btn_title="'Send'" :isOrange="true" />
+      <ElementsButton :isLarge="false" :isOutline="false" :btn_title="'Send'" :isOrange="true" />
     </div>
   </form>
 </template>
@@ -39,7 +39,7 @@ const props = defineProps([
     border-radius: 4px
     text-align: center
     padding: 48px 60px
-    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03)
+    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03)
 
 .request-form__title
     @include font-styles(28px, 700, 150%, 0, $dark)

@@ -28,6 +28,7 @@ const cards = [
   <div class="portfolio">
     <PortfolioCard
       v-for="card in cards"
+      :key="card.id"
       :image="card.image"
       :title="card.title"
       :text="card.text"

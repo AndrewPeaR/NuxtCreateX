@@ -20,7 +20,7 @@ const props = defineProps([
     @include font-styles(14px, 400, 150%, 0, $header_gray)
 .input__area
     // Очень плохой костыль, я знаю....
-    width: 300px
+    max-width: 415px
 
     @include font-styles(14px, 400, 150%, 0, $placeholder)
     background-color: $input_bg

@@ -19,10 +19,10 @@ const props = defineProps([
     justify-content: center
     align-items: center
     @include fast-transition
-    box-shadow: 0px 10px 30px 10px rgba(34, 60, 80, 0.01)
+    box-shadow: 0 10px 30px 10px rgba(34, 60, 80, 0.01)
 
 .btn-around:hover
-    box-shadow: 0px 10px 20px 10px rgba(34, 60, 80, 0.10)
+    box-shadow: 0 10px 20px 10px rgba(34, 60, 80, 0.10)
     
 .btn-mute
     width: 40px
