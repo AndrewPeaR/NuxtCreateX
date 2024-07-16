@@ -1,12 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['nuxt-svgo', "@nuxt/image"],
+  modules: ['nuxt-svgo', "@nuxt/image", 'nuxt-swiper'],
+  swiper: {
+    // Swiper options
+    //----------------------
+    // prefix: 'Swiper',
+    // styleLang: 'scss',
+    // modules: ['navigation', 'pagination', 'autoplay', 'effectcreative'], // all modules are imported by default
+  },
   vite: {
     css: {
       preprocessorOptions: {
         sass: {
-          additionalData: '@use "~/const/style.sass" as *\n'
+          additionalData: '@use "~/const/style.sass" as *\n',
+          sourceMap: false
         }
       }
     }

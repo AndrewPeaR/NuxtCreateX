@@ -1,18 +1,21 @@
 <script setup>
 const coreValueCard = [
   {
+    id: 1,
     icon: "QualityCard.svg",
     title: "Quality",
     parag:
       "Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.",
   },
   {
+    id: 2,
     icon: "SafetyCard.svg",
     title: "Safety",
     parag:
       "Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.",
   },
   {
+    id: 3,
     icon: "ComfortCard.svg",
     title: "Comfort",
     parag:
@@ -22,22 +25,21 @@ const coreValueCard = [
 </script>
 
 <template>
-  <div class="core-values">
-    <h2 class="section-title">We are Createx Construction Bureau</h2>
+  <section class="core-values">
+    <h2 class="section-title">Our core values</h2>
     <p class="section-description">
-      We are rightfully considered to be the best construction company in the
-      USA.
+      Our mission is to set the highest standards for construction sphere.
     </p>
     <div class="core-values-cards">
       <CoreValuesCard
         v-for="card in coreValueCard"
-        :key="card.title"
+        :key="card.id"
         :icon="card.icon"
         :title="card.title"
         :parag="card.parag"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="sass">

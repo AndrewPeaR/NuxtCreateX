@@ -8,6 +8,7 @@ const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge"]);
       btn_outline: isOutline,
       btn_orange: isOrange,
       btn_large: isLarge,
+      btn_outline_orange: isOutline && isOrange
     }"
     class="btn"
   >
@@ -24,10 +25,8 @@ const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge"]);
     border: 1px solid $white
     height: 44px
     @include fast-transition
-    box-shadow: 0 10px 30px 10px rgba(34, 60, 80, 0.01)
-
-.btn:hover
-    box-shadow: 0 10px 20px 10px rgba(34, 60, 80, 0.10)
+    @include shadow
+    @include hover-shadow
 
 .btn_orange
     border: 1px solid $orange
@@ -36,10 +35,13 @@ const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge"]);
 .btn_large
     height: 52px
     line-height: 325%
-  
+
+.btn_outline_orange
+    color: $orange
+
 .btn_outline
     background-color: transparent
-    color: $orange
+
 .btn_outline:hover
     border: 1px solid $orange
     background-color: $orange

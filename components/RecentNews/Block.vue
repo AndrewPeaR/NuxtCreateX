@@ -13,7 +13,7 @@ const recentNewsCard = [
     {
         id: 2,
         link: '#',
-        image:"recentnews2.png",
+        image:"recentnews1.png",
         title:"How Construction Can Help Itself",
         tagId: 2,
         timestampCreateAt:1620659867,
@@ -34,7 +34,7 @@ const recentNewsCard = [
 </script>
 
 <template>
-    <div class="recentnews">
+    <section class="recentnews">
         <RecentNewsCard 
             v-for="card in recentNewsCard"
             :key="card.id"
@@ -46,7 +46,7 @@ const recentNewsCard = [
             :countComments="card.countComments"
             :text="card.text"
         />
-    </div>
+    </section>
 </template>
 
 <style lang="sass">

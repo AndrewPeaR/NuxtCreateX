@@ -25,8 +25,9 @@ const cards = [
 </script>
 
 <template>
-  <div class="portfolio">
-    <PortfolioCard
+  <section class="portfolio">
+    <div class="portfolio__wrapper">
+      <PortfolioCard
       v-for="card in cards"
       :key="card.id"
       :image="card.image"
@@ -34,11 +35,19 @@ const cards = [
       :text="card.text"
       :link="card.link"
     />
-  </div>
+    </div>
+    <ElementsLearnMore 
+    :text="'Explore all our works'"
+    :link="'https://google.com'"
+    :link_title="'View portfolio'"
+  />
+  </section>
+  
 </template>
 
 <style lang="sass">
-.portfolio
+.portfolio__wrapper
     display: flex
     justify-content: space-between
+    margin-bottom: 80px
 </style>

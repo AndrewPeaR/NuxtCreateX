@@ -1,20 +1,54 @@
 <script setup>
 // Реализовать через запрос, а не статику
-const partners =['partner 1', 'partner 2', 'partner 3', 'partner 4']
+const partners = [
+  {
+    id: 1,
+    image: "partner1.svg",
+    site: 'https://google.com'
+  },
+  {
+    id: 2,
+    image: "partner1.svg",
+    site: 'https://google.com'
+  },
+  {
+    id: 3,
+    image: "partner1.svg",
+    site: 'https://google.com'
+  },
+  {
+    id: 4,
+    image: "partner1.svg",
+    site: 'https://google.com'
+  },
+  {
+    id: 5,
+    image: "partner1.svg",
+    site: 'https://google.com'
+  },
+  {
+    id: 6,
+    image: "partner1.svg",
+    site: 'https://google.com'
+  },
+];
 </script>
 
 <template>
-    <div class="partners">
-        <h2 class="partners__title">Supported by 12+ partners</h2>
-        <div class="partners__items">
-            <li class="partners__item"><NuxtLink :to="'#'"><img class="partners__image" src="/assets/image/partner1.png" alt="partner1"></NuxtLink></li>
-            <li class="partners__item"><NuxtLink :to="'#'"><img class="partners__image" src="/assets/image/partner1.png" alt="partner1"></NuxtLink></li>
-            <li class="partners__item"><NuxtLink :to="'#'"><img class="partners__image" src="/assets/image/partner1.png" alt="partner1"></NuxtLink></li>
-            <li class="partners__item"><NuxtLink :to="'#'"><img class="partners__image" src="/assets/image/partner1.png" alt="partner1"></NuxtLink></li>
-            <li class="partners__item"><NuxtLink :to="'#'"><img class="partners__image" src="/assets/image/partner1.png" alt="partner1"></NuxtLink></li>
-            <li class="partners__item"><NuxtLink :to="'#'"><img class="partners__image" src="/assets/image/partner1.png" alt="partner1"></NuxtLink></li>
-        </div>
-    </div>
+  <section class="partners">
+    <h2 class="partners__title">Supported by 12+ partners</h2>
+    <ul class="partners__items">
+      <li class="partners__item"
+        v-for="partner in partners"
+        :key="partner.id"
+        >
+        <NuxtLink :to="partner.site"
+          >
+          <ElementsIcon :filled="true" :fontControlled="false" :name="partner.image"/>
+        </NuxtLink>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <style lang="sass">

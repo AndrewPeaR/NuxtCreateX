@@ -13,6 +13,7 @@ const props = defineProps([
         :type="'text'"
         :placeholder="'Your name'"
         :nameInput="'firstname'"
+        :hardWidth="false"
         required
       />
       <ElementsInputForm
@@ -21,6 +22,7 @@ const props = defineProps([
         :placeholder="'Your phone'"
         :nameInput="'phone'"
         pattern="^\+7[1-9]{10}$"
+        :hardWidth="false"
         required
       />
       <ElementsInputForm
@@ -28,6 +30,7 @@ const props = defineProps([
         :type="'text'"
         :placeholder="'Your message'"
         :nameInput="'message'"
+        :hardWidth="true"
       />
       <ElementsButton :isLarge="false" :isOutline="false" :btn_title="'Send'" :isOrange="true" />
     </div>
@@ -36,10 +39,12 @@ const props = defineProps([
 
 <style lang="sass">
 .request-form
+    background-color: $white
     border-radius: 4px
     text-align: center
     padding: 48px 60px
-    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03)
+    @include fast-transition
+    @include shadow
 
 .request-form__title
     @include font-styles(28px, 700, 150%, 0, $dark)

@@ -10,7 +10,10 @@
         "
   >
     <div class="wrapper" style="margin-bottom: 30px">
-      
+      <ElementsSliderButton 
+        :isLeft="true"
+        :isGray="false"
+      />
     </div>
   </div>
 </template>

@@ -13,19 +13,15 @@ const props = defineProps(["image", "title", "text", "link"]);
     <div class="portfolio-card__menu">
       <h3 class="portfolio-card__title">{{ title }}</h3>
       <p class="portfolio-card__description">{{ text }}</p>
-      <NuxtLink
-        :to="link"
-      >
+      <NuxtLink :to="link">
         <ElementsButton
-        :isOrange="true"
-        :isLarge="false"
-        :isOutline="true"
-        :btn_title="'View project'"
-        class="portfolio-card__link"
-        >
-        View project
-      </ElementsButton>
-    </NuxtLink>
+          :isOrange="true"
+          :isLarge="false"
+          :isOutline="true"
+          :btn_title="'View project'"
+          class="portfolio-card__link"
+        />
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -38,12 +34,9 @@ const props = defineProps(["image", "title", "text", "link"]);
     width: 390px
     height: 440px
     @include fast-transition
-    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 4px 4px -4px rgba(30, 33, 44, 0.03)
+    @include shadow
+    @include hover-shadow
 
-
-.portfolio-card:hover
-    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.16), 0 30px 24px -10px rgba(154, 156, 165, 0.10), 0 12px 10px -6px rgba(154, 156, 165, 0.08), 0 4px 4px -4px rgba(30, 33, 44, 0.05)
-    
 .portfolio-card:hover .portfolio-card__menu
     bottom: 0
 
@@ -56,6 +49,7 @@ const props = defineProps(["image", "title", "text", "link"]);
     text-align: center
     @include fast-transition
     bottom: -68px
+    left: 0
 
 .portfolio-card__title
     @include font-styles(20px, 700, 150%, 0, $dark)

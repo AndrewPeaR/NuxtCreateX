@@ -11,7 +11,7 @@
              <ElementsIcon 
                 class="servicesCard__icon"
                 :name='icon'
-                :filled="true"
+                filled
                 :fontControlled="false"
              />
             <h3 class="servicesCard__title">{{ title }}</h3>
@@ -28,6 +28,8 @@
     width: 285px
     height: 285px
     @include transition
+    @include shadow
+    @include hover-shadow
 
 .servicesCard__backgroundImage
     opacity: 0

@@ -8,11 +8,14 @@ const props = defineProps([
 <template>
     <div class="learn-more">
         <p class="learn-more__text">{{ text }}</p>
-        <ElementsLinkButton 
-            :title="link_title"
-            :link="link"
-            :isOrange="true"
+        <NuxtLink :to="link">
+        <ElementsButton
+          :isOrange="true"
+          :isLarge="true"
+          :isOutline="false"
+          :btn_title="link_title"
         />
+      </NuxtLink>
     </div>
 </template>
 

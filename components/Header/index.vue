@@ -3,11 +3,9 @@
 </script>
 
 <template>
-    <header>
-        <div class="wrapper header">
-            <HeaderNav />
-            <HeaderNavContacts />
-        </div>
+    <header class="header">
+        <HeaderNav />
+        <HeaderNavContacts />
     </header>
 </template>
 

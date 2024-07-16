@@ -6,10 +6,10 @@ const props = defineProps([
 
 <template>
     <button v-if="type === 'play'" class="btn-around btn-play">
-        <IconPlay alt="play_btn" class="btn-play__icon" :fontControlled="false" :filled="true" />
+        <IconPlay alt="play_btn" class="btn-play__icon" :fontControlled="false" filled />
     </button>
     <button v-else-if="type === 'mute'" class="btn-around btn-mute">
-        <IconMute alt="mute-btn" :fontControlled="false" :filled="true" />
+        <IconMute alt="mute-btn" :fontControlled="false" filled />
     </button>
 </template>
 
@@ -19,10 +19,8 @@ const props = defineProps([
     justify-content: center
     align-items: center
     @include fast-transition
-    box-shadow: 0 10px 30px 10px rgba(34, 60, 80, 0.01)
-
-.btn-around:hover
-    box-shadow: 0 10px 20px 10px rgba(34, 60, 80, 0.10)
+    @include shadow
+    @include hover-shadow
     
 .btn-mute
     width: 40px
