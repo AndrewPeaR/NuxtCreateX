@@ -4,7 +4,6 @@ const props = defineProps(["image", "title", "text", "link"]);
 
 <template>
   <div class="portfolio-card">
-    <!-- Ваши эти картинки что-то с чем-то... -->
     <img
       :src="`_nuxt/assets/image/${image}`"
       :alt="image"

@@ -3,18 +3,16 @@
 <template>
   <div
     style="
-        background-color: rgba(0, 0, 0, 0.6); 
+        /* background-color: rgba(0, 0, 0, 0.6);  */
         height: 200vh; 
         width: 100%;
         padding-top: 50px;
         "
   >
-    <div class="wrapper" style="margin-bottom: 30px">
-      <ElementsSliderButton 
-        :isLeft="true"
-        :isGray="false"
-      />
-    </div>
+  <DiscussDetailsBlock :action="'#'" :method="'#'"/>
+    <!-- <div class="wrapper" style="margin-bottom: 30px">
+      
+    </div> -->
   </div>
 </template>
 

@@ -11,7 +11,7 @@ function alerting() {
     </div>
     <MainBlock />
     <div class="wrapper">
-      <CoreValuesBlock style="margin: 180px 0 120px 0;"/>
+      <CoreValuesBlock style="margin: 460px 0 120px 0;"/>
       <RequestformBlock :method="'Any method'" :action="'Any action'"/>
     </div>
     <ServicesBlock style="margin-bottom: 120px;"/>

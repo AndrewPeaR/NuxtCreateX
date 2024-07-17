@@ -1,40 +1,12 @@
 <script setup>
-const cards = [
-  {
-    id: 1,
-    image: "portfolio.png",
-    title: "Red Finger Building",
-    text: "Business Centers",
-    link: "https://google.com",
-  },
-  {
-    id: 2,
-    image: "portfolio2.png",
-    title: "Cubes Building",
-    text: "Business Centers",
-    link: "https://google.com",
-  },
-  {
-    id: 3,
-    image: "portfolio3.png",
-    title: "The Pencil Building",
-    text: "Stores & Malls",
-    link: "https://google.com",
-  },
-];
+
 </script>
 
 <template>
   <section class="portfolio">
+    <h2 class="section-title left">Browse our selected projects<br />and learn more about our work</h2>
     <div class="portfolio__wrapper">
-      <PortfolioCard
-      v-for="card in cards"
-      :key="card.id"
-      :image="card.image"
-      :title="card.title"
-      :text="card.text"
-      :link="card.link"
-    />
+      <PortfolioSlider />
     </div>
     <ElementsLearnMore 
     :text="'Explore all our works'"
@@ -47,7 +19,5 @@ const cards = [
 
 <style lang="sass">
 .portfolio__wrapper
-    display: flex
-    justify-content: space-between
     margin-bottom: 80px
 </style>

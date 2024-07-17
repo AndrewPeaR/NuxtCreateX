@@ -3,22 +3,7 @@
 
 <template>
     <main class="main">
-        <div class="main-slider">
-            <ElementsSliderButton 
-                class="main-slider__button prevElement"
-                :isLeft="true"
-                :isGray="true"
-            />
-            <MainSlider />
-            <ElementsSliderButton 
-                class="main-slider__button nextElement"
-                :isLeft="false"
-                :isGray="true"
-            />
-            <!-- <div class="main-slider__pagination">
-
-            </div> -->
-        </div>
+        <MainSlider />
         <div class="wrapper main__info">
             <h1 class="main__title">Create<span>X</span><br />construction</h1>
             <p class="main__description">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis. </p>
@@ -49,21 +34,6 @@
 <style lang="sass">
 .main
     position: relative
-.main-slider
-    position: absolute
-    top: 0
-    left: 0
-    text-align: center
-    z-index: 3
-    width: 100%
-.main-slider__button
-    position: absolute
-    z-index: 4
-    top: 50%
-.main-slider__button[class*='prevElement']
-    left: 2%
-.main-slider__button[class*='nextElement']
-    right: 2%
 
 .main__info
     max-width: 600px
