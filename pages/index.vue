@@ -5,21 +5,26 @@ function alerting() {
 </script>
 
 <template>
-  <div style="padding-bottom: 60px">
+  <div>
     <div class="wrapper">
       <Header />
     </div>
     <MainBlock />
     <div class="wrapper">
-      <CoreValuesBlock style="margin: 460px 0 120px 0;"/>
-      <RequestformBlock :method="'Any method'" :action="'Any action'"/>
+      <CoreValuesBlock style="margin: 460px 0 120px 0" />
+      <RequestFormBlock :method="'Any method'" :action="'Any action'" />
     </div>
-    <ServicesBlock style="margin-bottom: 120px;"/>
+    <ServicesBlock style="margin-bottom: 120px" />
     <div class="wrapper">
       <PortfolioBlock style="margin: 80px 0" />
-      <Partners style="margin-bottom: 80px;"/>     
-      <RecentNewsBlock />
+      <Partners style="margin-bottom: 80px" />
+      <RecentNewsBlock style="margin-bottom: 80px" />
     </div>
+    <DiscussDetailsBlock
+      :action="'#'"
+      :method="'#'"
+    />
+    <FooterBlock />
   </div>
 </template>
 

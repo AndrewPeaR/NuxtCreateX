@@ -4,10 +4,14 @@ const props = defineProps(["action", "method"]);
 
 <template>
   <section class="discuss">
-    <div class="wrapper">
+    <div class="wrapper discuss__wrapper">
       <DiscussDetailsFormCard :action="action" :method="method" />
     </div>
   </section>
 </template>
 
-<style lang="sass"></style>
+<style lang="sass">
+.discuss__wrapper
+  display: flex
+  justify-content: flex-end
+</style>

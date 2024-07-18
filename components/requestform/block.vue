@@ -32,7 +32,7 @@ const props = defineProps([
         :nameInput="'message'"
         :hardWidth="true"
       />
-      <ElementsButton :isLarge="false" :isOutline="false" :btn_title="'Send'" :isOrange="true" />
+      <ElementsButton type="submit" :isLarge="false" :isOutline="false" :btn_title="'Send'" :isOrange="true" />
     </div>
   </form>
 </template>

@@ -3,16 +3,15 @@
 <template>
   <div
     style="
-        /* background-color: rgba(0, 0, 0, 0.6);  */
+        background-color: rgba(0, 0, 0, 0.6); 
         height: 200vh; 
         width: 100%;
         padding-top: 50px;
         "
   >
-  <DiscussDetailsBlock :action="'#'" :method="'#'"/>
-    <!-- <div class="wrapper" style="margin-bottom: 30px">
-      
-    </div> -->
+  <div class="wrapper" style="margin-bottom: 30px">
+    <VideoBlock />
+    </div>
   </div>
 </template>
 
