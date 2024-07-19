@@ -50,6 +50,7 @@ const servicesCard = [{
 <style lang="sass">
 .services
     background: url('assets/image/backgroundServices.png')
+    background-size: cover
     padding: 212px 0 80px
 .services__wrapper
     display: flex

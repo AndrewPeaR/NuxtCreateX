@@ -7,21 +7,35 @@
 // - При воспроизведении появлялась кнопка для паузы
 
 const videoFile = "videobanner";
-let videoplayerFrame = ref("videoplayerFrame").value;
-let volumeControl = ref("volumeControl").value;
-let videoplayerPlay = ref("videoplayerPlay").value;
+const videoplayerFrame = ref("videoplayerFrame");
+const volumeLevel = 0.25;
+const videoplayerPlay = ref("videoplayerPlay").value;
+const isShow = ref(true);
+const isMute = ref(false);
 
 function playVideo() {
-  console.log(videoplayerFrame);
-  if (videoplayerFrame.paused) {
-    videoplayerFrame.volume = volumeControl.value;
-    videoplayerFrame.play();
-    videoplayerPlay.style.display = "none";
-  } else {
-    videoplayerFrame.pause();
+  console.log(videoplayerFrame.value);
+  if (videoplayerFrame.value.paused) {
+    videoplayerFrame.value.volume = volumeLevel;
+    videoplayerFrame.value.play();
+    isShow.value = false;
   }
 }
-function muteVideo() {}
+function muteVideo() {
+  if (videoplayerFrame.value.volume === volumeLevel) {
+    isMute.value = true
+    videoplayerFrame.value.volume = 0;
+  } else {
+    isMute.value = false
+    videoplayerFrame.value.volume = volumeLevel;
+  }
+}
+function stopVideo() {
+  if (!videoplayerFrame.value.paused) {
+    videoplayerFrame.value.pause();
+    isShow.value = true;
+  }
+}
 </script>
 
 <template>
@@ -50,20 +64,21 @@ function muteVideo() {}
         @click="playVideo()"
         :type="'play'"
         class="videoplayer__play"
+        :class="{ show: !isShow }"
       />
       <ElementsAroundButton
         @click="muteVideo()"
         class="videoplayer__mute"
         ref="videoplayerPlay"
+        :class="{ btn_muted: isMute }"
         :type="'mute'"
       />
-      <input
-        type="range"
-        step="0.1"
-        min="0"
-        max="1"
-        value="0"
-        ref="volumeControl"
+      <ElementsAroundButton
+        @click="stopVideo()"
+        class="videoplayer__stop"
+        ref="videoplayerPlay"
+        :class="{ show: isShow }"
+        :type="'stop'"
       />
     </div>
   </section>
@@ -86,4 +101,8 @@ function muteVideo() {}
     position: absolute
     bottom: 32px
     left: 32px
+.videoplayer__stop
+    position: absolute
+    top: 15px
+    right: 15px
 </style>

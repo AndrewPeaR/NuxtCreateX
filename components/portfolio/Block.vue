@@ -20,4 +20,5 @@
 <style lang="sass">
 .portfolio__wrapper
     margin-bottom: 80px
+    margin-top: 60px
 </style>

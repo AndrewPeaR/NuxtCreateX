@@ -27,6 +27,7 @@ const props = defineProps(['action', 'method'])
     background-color: rgba(255,255,255,0.12)
     border-top-right-radius: 0
     border-bottom-right-radius: 0
+    color: $white
 .footer-subscribe__submit
     border-top-left-radius: 0
     border-bottom-left-radius: 0

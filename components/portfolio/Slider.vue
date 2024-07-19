@@ -97,10 +97,10 @@ const cards = [
 .portfolio-slider__button[class*='prevElement']
     position: absolute
     right: 70px
-    top: -70px
+    top: -100px
 
 .portfolio-slider__button[class*='nextElement']
     position: absolute
     right: 10px
-    top: -70px
+    top: -100px
 </style>

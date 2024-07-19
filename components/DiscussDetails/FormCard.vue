@@ -83,6 +83,9 @@ const props = defineProps(["action", "method"]);
     @include fast-transition
     width: 415px
     resize: none
+.discuss__textarea:focus
+    outline: none
+    border: 1px solid #9A9CA5
 .discuss__label-textarea
     display: block
     margin-bottom: 8px

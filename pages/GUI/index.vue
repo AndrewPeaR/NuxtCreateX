@@ -1,18 +1,17 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
-  <div
-    style="
-        background-color: rgba(0, 0, 0, 0.6); 
-        height: 200vh; 
-        width: 100%;
-        padding-top: 50px;
-        "
-  >
-  <div class="wrapper" style="margin-bottom: 30px">
-    <VideoBlock />
-    </div>
+  <div class="block">
+    
   </div>
 </template>
 
-<style lang="sass"></style>
+<style lang="sass">
+.block
+  background-color: rgba(0, 0, 0, 0.6)
+  height: 200vh
+  width: 100%
+  padding-top: 50px
+</style>
