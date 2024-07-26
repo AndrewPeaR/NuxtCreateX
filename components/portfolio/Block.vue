@@ -18,6 +18,8 @@
 </template>
 
 <style lang="sass">
+.portfolio
+  margin: 80px 0
 .portfolio__wrapper
     margin-bottom: 80px
     margin-top: 60px

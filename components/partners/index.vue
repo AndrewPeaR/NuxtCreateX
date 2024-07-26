@@ -52,6 +52,8 @@ const partners = [
 </template>
 
 <style lang="sass">
+.partners
+  margin-bottom: 170px
 .partners__title
     text-align: center
     margin-bottom: 60px

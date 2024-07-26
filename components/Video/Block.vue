@@ -39,7 +39,7 @@ function stopVideo() {
 </script>
 
 <template>
-  <section>
+  <section class="video">
     <h2 class="section-title">We are Createx Construction Bureau</h2>
     <p class="section-description">
       We are rightfully considered to be the best construction company in the
@@ -85,6 +85,8 @@ function stopVideo() {
 </template>
 
 <style lang="sass">
+.video
+    margin: 460px 0 120px 0
 .videoplayer
     width: 100%
     height: 500px

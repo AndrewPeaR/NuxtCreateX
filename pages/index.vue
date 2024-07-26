@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  layout: 'default'
+})
+
 function alerting() {
   alert(`i'm button!`);
 }
@@ -6,34 +10,31 @@ function alerting() {
 
 <template>
   <div>
-    <div class="wrapper">
-      <Header />
-    </div>
+    <ElementsUpward />
     <MainBlock />
     <div class="wrapper">
-      <VideoBlock style="margin: 460px 0 120px 0" />
-      <CoreValuesBlock style="margin-bottom: 120px" />
+      <VideoBlock />
+      <CoreValuesBlock />
       <RequestFormBlock :method="'Any method'" :action="'Any action'" />
     </div>
-    <ServicesBlock style="margin-bottom: 120px" />
+    <ServicesBlock />
     <div class="wrapper">
-      <PortfolioBlock style="margin: 80px 0" />
+      <PortfolioBlock />
     </div>
-    <div class="wrapper_gray">
+    <div class="gray-wrapper">
       <div class="wrapper">
-        <Partners style="margin-bottom: 170px" />
+        <Partners />
         <ClientsSayingBlock />
       </div>
     </div>
     <div class="background-statistics">
       <img class="background-statistics__image" src="/assets/image/statistics-bg.png" alt="statistics-bg">
-      <StatisticsBlock style="margin: 180px 0" />
+      <StatisticsBlock />
     </div>
     <div class="wrapper">
-      <RecentNewsBlock style="margin-bottom: 80px" />
+      <RecentNewsBlock />
     </div>
     <DiscussDetailsBlock :action="'#'" :method="'#'" />
-    <FooterBlock />
   </div>
 </template>
 
@@ -43,11 +44,6 @@ form[class=request-form]
   z-index: 3
   margin-bottom: -92px
 
-.wrapper_gray
-  background-color: $input_bg
-  padding-top: 80px
-  padding-bottom: 120px
-
 .background-statistics
   position: relative
 
@@ -56,12 +52,4 @@ form[class=request-form]
   z-index: -1
   top: -600px
   left: -750px
-.pretty-wrapper
-  background-color: rgba(90, 109, 123, 0.6)
-  padding-top: 10px
-  padding-bottom: 10px
-  padding-left: 40px
-  display: flex
-  justify-content: space-evenly
-  align-items: center
 </style>

@@ -39,6 +39,8 @@
 </template>
 
 <style lang="sass">
+.statistics
+  margin: 180px 0
 .statistics__wrapper
     display: flex
     justify-content: center

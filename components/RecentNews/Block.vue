@@ -34,8 +34,8 @@ const recentNewsCard = [
 </script>
 
 <template>
-  <section>
-    <div class="recentnews">
+  <section class="recentnews">
+    <div class="recentnews__wrapper">
       <RecentNewsCard
         v-for="card in recentNewsCard"
         :key="card.id"
@@ -58,6 +58,8 @@ const recentNewsCard = [
 
 <style lang="sass">
 .recentnews
+    margin-bottom: 80px
+.recentnews__wrapper
     display: grid
     grid-template-columns: repeat(12, 1fr)
     grid-template-rows: repeat(2, 1fr)

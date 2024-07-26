@@ -43,6 +43,8 @@ const coreValueCard = [
 </template>
 
 <style lang="sass">
+.core-values
+  margin-bottom: 120px
 .core-values-cards
     display: flex
     justify-content: space-between

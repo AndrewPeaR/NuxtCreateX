@@ -49,6 +49,7 @@ const servicesCard = [{
 
 <style lang="sass">
 .services
+    margin-bottom: 120px
     background: url('assets/image/backgroundServices.png')
     background-size: cover
     padding: 212px 0 80px
