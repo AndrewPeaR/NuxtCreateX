@@ -83,12 +83,12 @@ function functionBullet(index, className) {
     left: 2%
 .main-slider__button[class*='nextElement']
     right: 2%
-.swiper-pagination
+.main-slider .swiper-pagination
     display: flex
     text-align: left
     left: 18% !important
     bottom: 100px !important
-.swiper-pagination-bullet
+.main-slider .swiper-pagination-bullet
     width: 178px
     height: 2px
     margin-right: 4px
@@ -101,6 +101,6 @@ function functionBullet(index, className) {
     display: flex
     flex-direction: column-reverse
 
-.swiper-pagination-bullet-active
+.main-slider .swiper-pagination-bullet-active
     opacity: 1
 </style>

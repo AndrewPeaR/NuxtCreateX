@@ -4,7 +4,7 @@
 
 <template>
   <div class="block">
-    
+    <WorkHouseBlock />
   </div>
 </template>
 

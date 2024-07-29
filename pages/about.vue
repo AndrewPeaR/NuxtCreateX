@@ -6,6 +6,7 @@ definePageMeta({
 
 <template>
   <div>
+    <WorkHouseBlock />
     <DecisionsBlock />
     <WeOfferBlock />
     <PricingBlock />
