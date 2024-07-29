@@ -3,15 +3,17 @@
 </script>
 
 <template>
-    <section class="we-offer">
-        <img class="we-offer__image" src="/assets/image/weoffer.png" alt="weoffer">
-        <div class="we-offer__info">
-            <h2 class="section-title left we-offer__title">
-                We offer
-            </h2>
-            <WeOfferAccordeon />
-        </div>
-    </section>
+    <div class="wrapper">
+        <section class="we-offer">
+            <img class="we-offer__image" src="/assets/image/weoffer.png" alt="weoffer">
+            <div class="we-offer__info">
+                <h2 class="section-title left we-offer__title">
+                    We offer
+                </h2>
+                <WeOfferAccordeon />
+            </div>
+        </section>
+    </div>
 </template>
 
 <style lang="sass">

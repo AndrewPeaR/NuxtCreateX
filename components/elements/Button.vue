@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge"]);
+const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge", 'isSmall']);
 </script>
 
 <template>
@@ -7,8 +7,9 @@ const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge"]);
     :class="{
       btn_outline: isOutline,
       btn_orange: isOrange,
-      btn_large: isLarge,
-      btn_outline_orange: isOutline && isOrange
+      btn_large: isLarge && !isSmall,
+      btn_outline_orange: isOutline && isOrange,
+      btn_small: isSmall && !isLarge
     }"
     class="btn"
   >
@@ -35,6 +36,11 @@ const props = defineProps(["btn_title", "isOutline", "isOrange", "isLarge"]);
 .btn_large
     height: 52px
     line-height: 325%
+
+.btn_small
+    height: 36px
+    padding: 0 24px
+    font-size: 12px
 
 .btn_outline_orange
     color: $orange

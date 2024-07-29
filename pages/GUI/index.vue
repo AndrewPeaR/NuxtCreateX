@@ -10,8 +10,9 @@
 
 <style lang="sass">
 .block
-  background-color: rgba(0, 0, 0, 0.6)
-  height: 200vh
+  // background-color: rgba(0, 0, 0, 0.6)
+  padding-top: 50px
+  padding-bottom: 50px
   width: 100%
   padding-top: 50px
 </style>

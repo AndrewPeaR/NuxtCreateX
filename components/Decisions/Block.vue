@@ -28,7 +28,8 @@ const decisionsItems = [
 </script>
 
 <template>
-  <section class="decisions">
+  <div class="gray-wrapper">
+  <section class="wrapper decisions">
     <img
       src="/assets/image/decisions-poster.png"
       alt="decisions-poster"
@@ -43,6 +44,7 @@ const decisionsItems = [
       </ul>
     </div>
   </section>
+</div>
 </template>
 
 <style lang="sass">

@@ -6,14 +6,9 @@ definePageMeta({
 
 <template>
   <div>
-    <div class="gray-wrapper">
-        <div class="wrapper">
-            <DecisionsBlock />
-        </div>
-    </div>
-    <div class="wrapper">
-        <WeOfferBlock />
-    </div>
+    <DecisionsBlock />
+    <WeOfferBlock />
+    <PricingBlock />
   </div>
 </template>
 
