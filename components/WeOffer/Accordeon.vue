@@ -12,14 +12,16 @@
           class="accordion__checkbox"
           checked
         />
-        <button class="accordion__button">
+        <label for="accordion__item-1" class="accordion__title"
+        >
+        <div class="accordion__button">
             <div  class="line-wrapper">
                 <div class="horizontal"></div>
                 <div class="vertical"></div>
             </div>
-        </button>
-      <label for="accordion__item-1" class="accordion__title"
-        >Interior design of apartments</label
+        </div>
+        
+        Interior design of apartments</label
       >
       <div class="accordion__content">
         Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet
@@ -35,14 +37,16 @@
         id="accordion__item-2"
         class="accordion__checkbox"
       />
-      <button class="accordion__button">
-            <div  class="line-wrapper">
-                <div class="horizontal"></div>
-                <div class="vertical"></div>
-            </div>
-        </button>
       <label for="accordion__item-2" class="accordion__title"
-        >Interior design of private houses</label
+      >
+      <div class="accordion__button">
+          <div  class="line-wrapper">
+              <div class="horizontal"></div>
+              <div class="vertical"></div>
+          </div>
+      </div>
+        
+        Interior design of private houses</label
       >
       <div class="accordion__content">
         Adipiscing nunc arcu enim elit mattis eu placerat proin. Imperdiet
@@ -107,6 +111,6 @@
   bottom: 2px
   transform: rotate(90deg)
 
-.accordion__checkbox:checked ~ .accordion__button .vertical
+.accordion__checkbox:checked ~ .accordion__title .vertical
   transform: rotate(180deg)
 </style>

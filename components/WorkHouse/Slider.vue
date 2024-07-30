@@ -30,6 +30,10 @@ const house = {
   name: "Modern cottage",
   images: houseImage,
 };
+
+// renderBullet: function(index, className) {
+//   return '<span class="' + className + '">' + (index + 1) + '</span>';
+// }
 </script>
 
 <template>
@@ -58,8 +62,18 @@ const house = {
         type: 'custom',
         bulletClass: 'work-slider__image',
         bulletActiveClass: 'work-slider__image_active',
+        // renderCustom: function(swiper, current, total){
+        //   const image = houseImage[current-1].imageUrl
+        //   const pictures = ''
+        //   for(let i = 0; i<houseImage.length; i++){
+        //     pictures += `<img src='_nuxt/assets/image/cottage/${houseImage[i].imageUrl}' class='work-slider__image'/>`
+        //   }
+
+        //   return pictures
+        //   // return current + ' of ' + total;
+        // }
       }"
-      :loop="true"
+      
       :autoplay="{
         delay: 8000,
         disableOnInteraction: true,
@@ -90,6 +104,12 @@ const house = {
     position: relative
     z-index: 1
     height: 500px
+.work-slider:after
+  content: url('assets/image/work-slider__bg.png')
+  position: absolute
+  top: -300px
+  right: -700px
+    
 
 .work-slider > .swiper
     height: 100%
@@ -120,6 +140,10 @@ const house = {
     height: 100px
     object-fit: cover
     border-radius: 4px
+    @include fast-transition
+.work-slider__image:hover
+    cursor: pointer
+    opacity: 1
 .work-slider__image_active
     opacity: 1
 </style>
